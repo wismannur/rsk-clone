@@ -46,7 +46,7 @@
             class="inline-block"
           >
             <div class="table">
-              <div class="flex bg-white p-2 mx-2 rounded items-center h-11">
+              <div class="flex bg-white py-2 px-4 mx-2 rounded items-center h-11">
                 <img :src="c.icon" alt="" class="w-6 inline-block align-middle">
                 <span class="ml-3 text-sm px-2">{{ c.title }}</span>
               </div>
@@ -124,7 +124,7 @@ export default defineComponent({
   -webkit-box-pack: center;
   box-sizing: border-box;
 
-  @apply inline-block flex-row flex-wrap w-full whitespace-nowrap overflow-x-auto justify-center py-2 my-2;
+  @apply inline-block flex-row flex-wrap w-full whitespace-nowrap overflow-x-auto justify-center pt-2 pb-1 my-2;
 }
 .scrollbar-black::-webkit-scrollbar {
   width: 5px;
