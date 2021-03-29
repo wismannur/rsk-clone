@@ -20,8 +20,9 @@
       </div>
     </section>
     <section class="banner">
-
+      <div class="container px-14"></div>
     </section>
+    <Footer />
   </div>
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
@@ -73,7 +74,7 @@ export default defineComponent({
           title: "Teknologi Informasi",
           icon: "/icon/teknologi-informasi.svg",
         },
-      ]
+      ],
     }
   }
 })
