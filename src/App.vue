@@ -2,7 +2,7 @@
   <Header />
   <div class="home-body">
     <section class="category-icon">
-      <div class="container px-14">
+      <div class="container px-16">
         <div class="list-category scrollbar-black">
           <div
             v-for="(c, idx) in listCategory"
@@ -20,10 +20,31 @@
       </div>
     </section>
     <section class="banner">
-      <div class="container px-14"></div>
+      <div class="container px-16"></div>
     </section>
-    <Footer />
+    <section id="prakerja-button">
+      <div class="container px-16">
+        <div class="flex flex-row justify-between px-5 py-4 my-3 rounded bg-primary-blue">
+          <img src="/image/prakerja-white.png" alt="" class="w-28">
+          <div class="flex flex-row items-center justify-center">
+            <div class="left-voucher-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-12 h-12">
+              <a href="https://www.rumahsiapkerja.com/redeem-voucher" class="flex">
+                <img src="/icon/tukar-voucher-prakerja.svg" alt="" class="w-4 mr-2">
+                Tukar Voucher Prakerja
+              </a>
+            </div>
+            <div class="right-sertifikat-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-12 h-12">
+              <a href="https://www.rumahsiapkerja.com/check-certificate" class="flex">
+                <img src="/icon/check-sertifikat-pelatihan.svg" alt="" class="w-4 mr-2">
+                Tukar Voucher Prakerja
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+  <Footer />
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
 </template>
@@ -85,6 +106,7 @@ export default defineComponent({
 }
 .home-body {
   background: #f0f0f0;
+  @apply pb-5;
 }
 .list-category {
   -webkit-box-orient: horizontal;

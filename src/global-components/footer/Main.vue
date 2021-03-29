@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-primary-blue">
-    <div class="container px-14">
+    <div class="container px-16">
       <div class="flex flex-row justify-between border-b border-white">
         <div class="flex flex-row justify-center items-center py-5 ml-8 mr-2">
           <div
