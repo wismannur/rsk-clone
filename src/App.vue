@@ -44,6 +44,112 @@
       </div>
     </section>
   </div>
+  <div class="training">
+    <div class="container px-16">
+      <div class="pelatihan my-3">
+        <div class="flex flex-row justify-between items-center mt-2 mb-4">
+          <h1 class="text-2xl font-semibold">Pelatihan Terbaru</h1>
+          <p class="text-primary-blue text-base">Lihat Semua</p>
+        </div>
+        <div class="flex flex-row w-full py-3">
+          <div 
+            v-for="(pt, idx) in listPelatihanTerbaru"
+            :key="idx"
+            class="flex flex-col w-1/4 px-1 mx-1"
+          >
+            <a :href="pt.url">
+              <div 
+                class="card-image rounded-t-lg"
+                :style="{
+                  'background-image': 'url('+ pt.image +')'
+                }"
+              >
+              </div>
+              <div class="p-2">
+                <h3 class="text-xl font-semibold">{{ pt.title.length > 44 ? pt.title.slice(0, 44) + '...' : pt.title }}</h3>
+                <div class="flex flex-row justify-between my-1">
+                  <p class="text-md">{{ pt.harga }}</p>
+                  <p class="flex text-md text-gray-600">
+                    <img src="/icon/star.svg" alt="" class="w-3 mr-2">
+                    {{ pt.rating }}
+                  </p>
+                </div>
+                <p class="text-md text-gray-600 my-1">{{ pt.typeKelas }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pelatihan my-3">
+        <div class="flex flex-row justify-between items-center mt-2 mb-4">
+          <h1 class="text-2xl font-semibold">Bisnis & Keuangan</h1>
+          <p class="text-primary-blue text-base">Lihat Semua</p>
+        </div>
+        <div class="flex flex-row w-full py-3">
+          <div 
+            v-for="(pt, idx) in listPelatihanTerbaru"
+            :key="idx"
+            class="flex flex-col w-1/4 px-1 mx-1"
+          >
+            <a :href="pt.url">
+              <div 
+                class="card-image rounded-t-lg"
+                :style="{
+                  'background-image': 'url('+ pt.image +')'
+                }"
+              >
+              </div>
+              <div class="p-2">
+                <h3 class="text-xl font-semibold">{{ pt.title.length > 44 ? pt.title.slice(0, 44) + '...' : pt.title }}</h3>
+                <div class="flex flex-row justify-between my-1">
+                  <p class="text-md">{{ pt.harga }}</p>
+                  <p class="flex text-md text-gray-600">
+                    <img src="/icon/star.svg" alt="" class="w-3 mr-2">
+                    {{ pt.rating }}
+                  </p>
+                </div>
+                <p class="text-md text-gray-600 my-1">{{ pt.typeKelas }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pelatihan my-3">
+        <div class="flex flex-row justify-between items-center mt-2 mb-4">
+          <h1 class="text-2xl font-semibold">Pemasaran</h1>
+          <p class="text-primary-blue text-base">Lihat Semua</p>
+        </div>
+        <div class="flex flex-row w-full py-3">
+          <div 
+            v-for="(pt, idx) in listPelatihanTerbaru"
+            :key="idx"
+            class="flex flex-col w-1/4 px-1 mx-1"
+          >
+            <a :href="pt.url">
+              <div 
+                class="card-image rounded-t-lg"
+                :style="{
+                  'background-image': 'url('+ pt.image +')'
+                }"
+              >
+              </div>
+              <div class="p-2">
+                <h3 class="text-xl font-semibold">{{ pt.title.length > 44 ? pt.title.slice(0, 44) + '...' : pt.title }}</h3>
+                <div class="flex flex-row justify-between my-1">
+                  <p class="text-md">{{ pt.harga }}</p>
+                  <p class="flex text-md text-gray-600">
+                    <img src="/icon/star.svg" alt="" class="w-3 mr-2">
+                    {{ pt.rating }}
+                  </p>
+                </div>
+                <p class="text-md text-gray-600 my-1">{{ pt.typeKelas }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <Footer />
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
@@ -96,6 +202,40 @@ export default defineComponent({
           icon: "/icon/teknologi-informasi.svg",
         },
       ],
+      listPelatihanTerbaru: [
+        {
+          title: "Bisnis Mudah Jadi Dropshiper",
+          url: "https://www.rumahsiapkerja.com/pelatihan/83b9974f-2fdc-4fa4-9130-75081023cf0e",
+          image: "https://app.rumahsiapkerja.com/rsk-backend/v1/training/cover-image/83b9974f-2fdc-4fa4-9130-75081023cf0e.jpeg",
+          harga: "Rp. 300.000",
+          typeKelas: "Kelas Video",
+          rating: "4.5",
+        },
+        {
+          title: "Belajar Bahasa Jerman dengan Orang Jermannya Langsung!",
+          url: "https://www.rumahsiapkerja.com/pelatihan/fe112d21-6c92-4882-9bfc-fd444154d847",
+          image: "https://app.rumahsiapkerja.com/rsk-backend/v1/training/cover-image/fe112d21-6c92-4882-9bfc-fd444154d847.jpg",
+          harga: "Rp. 250.000",
+          typeKelas: "Kelas Video",
+          rating: "4.8",
+        },
+        {
+          title: "Cara Membangun Tim yang Hebat",
+          url: "https://www.rumahsiapkerja.com/pelatihan/535c9ccc-125e-4d79-b8d7-f8307a2e66fe",
+          image: "https://app.rumahsiapkerja.com/rsk-backend/v1/training/cover-image/535c9ccc-125e-4d79-b8d7-f8307a2e66fe.jpeg",
+          harga: "Rp. 200.000",
+          typeKelas: "Kelas Video",
+          rating: "5.0",
+        },
+        {
+          title: "Sandiaga Uno Mengajar Bisnis",
+          url: "https://www.rumahsiapkerja.com/pelatihan/40187128-ecd3-4c29-a839-76d40ff2cabb",
+          image: "https://app.rumahsiapkerja.com/rsk-backend/v1/training/cover-image/40187128-ecd3-4c29-a839-76d40ff2cabb.jpeg",
+          harga: "Rp. 300.000",
+          typeKelas: "Kelas Video",
+          rating: "5.0",
+        },
+      ]
     }
   }
 })
@@ -107,6 +247,10 @@ export default defineComponent({
 .home-body {
   background: #f0f0f0;
   @apply pb-5;
+}
+.training {
+  background: #fafafa;
+  @apply py-5;
 }
 .list-category {
   -webkit-box-orient: horizontal;
@@ -121,12 +265,21 @@ export default defineComponent({
   height: 5px;
 }
 .scrollbar-black::-webkit-scrollbar-thumb {
-    background: grey;
-    border-radius: 10px;
+  background: grey;
+  border-radius: 10px;
 }
 .scrollbar-black::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 5px grey;
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.card-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+  width: 100%;
+  height: 174px;
+  overflow: hidden;
 }
 </style>
