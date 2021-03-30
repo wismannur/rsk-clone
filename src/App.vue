@@ -112,7 +112,7 @@
               <div
                 class="card-image rounded-t-lg"
                 :style="{
-                  'background-image': 'url(' + pt.image + ')',
+                  backgroundImage: 'url(' + pt.image + ')',
                 }"
               ></div>
               <div class="p-2">
@@ -153,7 +153,7 @@
               <div
                 class="card-image rounded-t-lg"
                 :style="{
-                  'background-image': 'url(' + pt.image + ')',
+                  backgroundImage: 'url(' + pt.image + ')',
                 }"
               ></div>
               <div class="p-2">
@@ -194,7 +194,7 @@
               <div
                 class="card-image rounded-t-lg"
                 :style="{
-                  'background-image': 'url(' + pt.image + ')',
+                  backgroundImage: 'url(' + pt.image + ')',
                 }"
               ></div>
               <div class="p-2">
@@ -273,8 +273,6 @@
     </div>
   </div>
   <Footer />
-  <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -593,7 +591,6 @@ ol, li {
   left: 0;
   display: flex;
   overflow-x: scroll;
-  /* counter-reset: item; */
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
@@ -602,13 +599,10 @@ ol, li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  /* background-color: #f99; */
-  /* counter-increment: item; */
   @apply my-3;
 }
 
 .carousel__slide:before {
-  /* content: counter(item); */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -667,7 +661,6 @@ ol, li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  /* background-color: #333; */
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -699,30 +692,4 @@ ol, li {
 .carousel__next {
   right: -1rem;
 }
-
-/* .carousel::before,
-.carousel::after {
-  content: '';
-  z-index: 1;
-  background-color: #333;
-  background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: #fff;
-  font-size: 2.5rem;
-  line-height: 4rem;
-  text-align: center;
-  pointer-events: none;
-} */
-
-/* .carousel::before {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  margin-left: 35px;
-}
-
-.carousel::after {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  margin-right: 35px;
-} */
-
 </style>
