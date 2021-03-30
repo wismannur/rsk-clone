@@ -1,16 +1,16 @@
 <template>
   <footer class="bg-primary-blue">
     <div class="container px-3 md:px-16">
-      <div class="flex flex-row justify-between border-b border-white">
-        <div class="flex flex-row justify-center items-center py-5 ml-8 mr-2">
+      <div class="flex flex-col flex-wrap lg:flex-row justify-between border-none lg:border-b border-white">
+        <div class="flex flex-row order-min-2 lg:order-none justify-center items-center pt-5 pb-2 lg:py-5 mr-3 lg:ml-8 lg:mr-2">
           <div
             class="logo-footer-rsk flex flex-col justify-center items-center"
           >
-            <img src="/icon/logo.svg" alt="logo rsk" class="w-44" />
-            <h3 class="text-white font-semibold">Rumah Siap Kerja</h3>
+            <img src="/icon/logo.svg" alt="logo rsk" class="w-24 lg:w-44" />
+            <h3 class="text-white font-semibold hidden lg:block">Rumah Siap Kerja</h3>
           </div>
         </div>
-        <div class="flex flex-col py-5 mx-3">
+        <div class="flex flex-row justify-between lg:justify-start lg:flex-col py-2 lg:py-5 mx-3">
           <a
             v-for="(lh, idx) in listFooterHome"
             :key="idx"
@@ -19,7 +19,7 @@
             >{{ lh.title }}</a
           >
         </div>
-        <div class="flex flex-col py-5 mx-3">
+        <div class="flex flex-row justify-between lg:justify-start lg:flex-col py-2 lg:py-5 mx-10 lg:mx-3">
           <a
             v-for="(ls, idx) in listFooterSK"
             :key="idx"
@@ -28,7 +28,7 @@
             >{{ ls.title }}</a
           >
         </div>
-        <div class="flex flex-col py-5 mx-3">
+        <div class="flex flex-row order-min-1 lg:order-none justify-between lg:justify-start lg:flex-col py-2 lg:py-5 mx-12 lg:mx-3">
           <a
             v-for="(lsm, idx) in listFooterSosmed"
             :key="idx"
@@ -36,11 +36,11 @@
             class="text-white text-sm my-2 flex items-center"
           >
             <img :src="lsm.icon" alt="logo sosmes rsk" class="w-8 mr-3" />
-            {{ lsm.title }}</a
-          >
+            <span class="hidden lg:block">{{ lsm.title }}</span>
+          </a>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center py-3">
+      <div class="flex flex-col justify-center items-center pt-3 pb-5 lg:py-3">
         <p class="text-white text-sm my-1">
           &copy; Rumah Siap Kerja 2021. All Rights Reserved.
         </p>

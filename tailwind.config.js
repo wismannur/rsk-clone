@@ -14,6 +14,10 @@ module.exports = {
   },
   darkMode: "class",
   theme: {
+    order: {
+      'min-1': '-1',
+      'min-2': '-2',
+    },
     extend: {
       colors: {
         "primary-yellow": "#ffc709",
