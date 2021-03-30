@@ -7,7 +7,7 @@
           <div v-for="(c, idx) in listCategory" :key="idx" class="inline-block">
             <div class="table">
               <div
-                class="flex bg-white py-2 px-4 mx-2 rounded items-center h-11"
+                class="flex bg-white py-2 px-4 mx-2 rounded items-center h-10 md:h-11"
               >
                 <img
                   :src="c.icon"
@@ -93,38 +93,40 @@
     <section id="prakerja-button">
       <div class="container px-3 md:px-16">
         <div
-          class="flex flex-row justify-between px-5 py-4 my-3 rounded bg-primary-blue"
+          class="flex flex-col md:flex-row justify-between px-3 md:px-5 pt-2 pb-4 md:py-4 my-3 rounded bg-primary-blue"
         >
           <img src="/image/prakerja-white.png" alt="" class="w-28" />
           <div class="flex flex-row items-center justify-center">
             <div
-              class="left-voucher-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-12 h-12"
+              class="left-voucher-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-2 md:px-11 h-10 md:h-12"
             >
               <a
                 href="https://www.rumahsiapkerja.com/redeem-voucher"
-                class="flex"
+                class="flex text-sm md:text-lg w-full"
               >
                 <img
                   src="/icon/tukar-voucher-prakerja.svg"
                   alt=""
-                  class="w-4 mr-2"
+                  class="w-5 mx-2 md:mr-2"
                 />
-                Tukar Voucher Prakerja
+                <span class="hidden md:block whitespace-nowrap">Tukar Voucher Prakerja</span>
+                <span class="block md:hidden whitespace-nowrap">Tukar Voucher</span>
               </a>
             </div>
             <div
-              class="right-sertifikat-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-12 h-12"
+              class="right-sertifikat-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-2 md:px-11 h-10 md:h-12"
             >
               <a
                 href="https://www.rumahsiapkerja.com/check-certificate"
-                class="flex"
+                class="flex text-sm md:text-lg w-full"
               >
                 <img
                   src="/icon/check-sertifikat-pelatihan.svg"
                   alt=""
-                  class="w-4 mr-2"
+                  class="w-5 mx-2 md:mr-2"
                 />
-                Tukar Voucher Prakerja
+                <span class="hidden md:block whitespace-nowrap">Check Sertifikat Prakerja</span>
+                <span class="block md:hidden whitespace-nowrap">Check Sertifikat</span>
               </a>
             </div>
           </div>
