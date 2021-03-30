@@ -180,7 +180,23 @@
     </div>
   </div>
   <div class="mitra-rsk">
-
+    <div class="container px-3 md:px-16">
+      <div class="flex flex-col justify-center items-start md:items-center my-3">
+        <h3 class="text-xl font-semibold mb-3">Mitra RSK</h3>
+        <p class="text-lg">Rumah Siap Kerja dipercaya oleh institusi terbaik di Indonesia.</p>
+        <div class="grid grid-cols-3 md:grid-cols-4 gap-6 w-full mt-3">
+          <div 
+            v-for="(mk, idx) in listMitraRsk"
+            :key="idx"
+            class="col-span-1 my-5"
+          >
+            <div class="flex justify-center items-center">
+              <img :src="mk.image" :style="mk.style" alt="" class="w-24">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <Footer />
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" /> -->
@@ -300,6 +316,56 @@ export default defineComponent({
           location: "Jakarta Timur",
           update: "Diposting 2 minggu yang lalu",
           url: "https://www.rumahsiapkerja.com/lowongan-kerja/d0301288-2372-4a9b-9086-b24d307f61d3",
+        },
+      ],
+      listMitraRsk: [
+        {
+          image: "/icon/tiktok.svg",
+          style: "",
+        },
+        {
+          image: "/icon/telkomsel.svg",
+          style: "",
+        },
+        {
+          image: "/icon/home-credit.svg",
+          style: "",
+        },
+        {
+          image: "/icon/bank-indonesia.svg",
+          style: "transform: translate(0px, -10%);",
+        },
+        {
+          image: "/image/bca.png",
+          style: "filter: grayscale(100%);",
+        },
+        {
+          image: "/icon/ui.svg",
+          style: "transform: translate(0px, -20%); max-width: 60px;",
+        },
+        {
+          image: "/icon/ipb.svg",
+          style: "transform: translate(0px, -20%); max-width: 60px;",
+        },
+        {
+          image: "/icon/uph.svg",
+          style: "transform: translate(0px, -20%); max-width: 60px;",
+        },
+        {
+          image: "/icon/binar-academy.svg",
+          style: "transform: translate(0px, -17%);",
+        },
+        {
+          image: "/image/tower-bersama.png",
+          style: "filter: grayscale(100%);",
+        },
+        {
+          image: "/icon/cigna.svg",
+          style: "transform: translate(0px, 10%);",
+        },
+        {
+          image: "/icon/pkss.svg",
+          style: "transform: translate(0px, -20%);",
         },
       ]
     }
