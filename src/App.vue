@@ -141,13 +141,15 @@
           <h1 class="text-2xl font-semibold">Pelatihan Terbaru</h1>
           <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
-        <div class="flex flex-row w-full py-3">
+        <div class="flex flex-row w-auto md:w-full py-3 overflow-x-auto md:overflow-x-hidden">
           <div
             v-for="(pt, idx) in listPelatihanTerbaru"
             :key="idx"
-            class="flex flex-col w-1/4 px-1 mx-1"
+            class="flex flex-col w-60 md:w-1/4 px-1 mx-1"
           >
-            <a :href="pt.url">
+            <a :href="pt.url"
+              class="w-full"
+            >
               <div
                 class="card-image rounded-t-lg"
                 :style="{
