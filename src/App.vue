@@ -637,6 +637,7 @@ ol, li {
   width: 100%;
   background-color: #f99;
   counter-increment: item;
+  @apply my-3;
 }
 
 .carousel__slide:nth-child(even) {
