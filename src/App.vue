@@ -2,12 +2,12 @@
   <Header />
   <div class="home-body">
     <section class="category-icon">
-      <div class="container px-3 md:px-16">
+      <div class="container px-3 lg:px-16">
         <div class="list-category scrollbar-black">
           <div v-for="(c, idx) in listCategory" :key="idx" class="inline-block">
             <div class="table">
               <div
-                class="flex bg-white py-2 px-4 mx-2 rounded items-center h-10 md:h-11"
+                class="flex bg-white py-2 px-4 mx-2 rounded items-center h-10 lg:h-11"
               >
                 <img
                   :src="c.icon"
@@ -22,7 +22,7 @@
       </div>
     </section>
     <section class="banner">
-      <div class="container px-3 md:px-16">
+      <div class="container px-3 lg:px-16">
         <section class="carousel h-40" aria-label="Gallery">
           <ol class="carousel__viewport scroll-bar-transparent">
             <li id="carousel__slide1" tabindex="0" class="carousel__slide">
@@ -91,42 +91,42 @@
       </div>
     </section>
     <section id="prakerja-button">
-      <div class="container px-3 md:px-16">
+      <div class="container px-3 lg:px-16">
         <div
-          class="flex flex-col md:flex-row justify-between px-3 md:px-5 pt-2 pb-4 md:py-4 my-3 rounded bg-primary-blue"
+          class="flex flex-col lg:flex-row justify-between px-3 lg:px-5 pt-2 pb-4 lg:py-4 my-3 rounded bg-primary-blue"
         >
           <img src="/image/prakerja-white.png" alt="" class="w-28" />
           <div class="flex flex-row items-center justify-center">
             <div
-              class="left-voucher-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-2 md:px-11 h-10 md:h-12"
+              class="left-voucher-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-2 lg:px-11 h-10 lg:h-12"
             >
               <a
                 href="https://www.rumahsiapkerja.com/redeem-voucher"
-                class="flex text-sm md:text-lg w-full"
+                class="flex text-sm lg:text-lg w-full"
               >
                 <img
                   src="/icon/tukar-voucher-prakerja.svg"
                   alt=""
-                  class="w-5 mx-2 md:mr-2"
+                  class="w-5 mx-2 lg:mr-2"
                 />
-                <span class="hidden md:block whitespace-nowrap">Tukar Voucher Prakerja</span>
-                <span class="block md:hidden whitespace-nowrap">Tukar Voucher</span>
+                <span class="hidden lg:block whitespace-nowrap">Tukar Voucher Prakerja</span>
+                <span class="block lg:hidden whitespace-nowrap">Tukar Voucher</span>
               </a>
             </div>
             <div
-              class="right-sertifikat-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-2 md:px-11 h-10 md:h-12"
+              class="right-sertifikat-prakerja w-1/2 mx-2 bg-white rounded flex items-center justify-center px-2 lg:px-11 h-10 lg:h-12"
             >
               <a
                 href="https://www.rumahsiapkerja.com/check-certificate"
-                class="flex text-sm md:text-lg w-full"
+                class="flex text-sm lg:text-lg w-full"
               >
                 <img
                   src="/icon/check-sertifikat-pelatihan.svg"
                   alt=""
-                  class="w-5 mx-2 md:mr-2"
+                  class="w-5 mx-2 lg:mr-2"
                 />
-                <span class="hidden md:block whitespace-nowrap">Check Sertifikat Prakerja</span>
-                <span class="block md:hidden whitespace-nowrap">Check Sertifikat</span>
+                <span class="hidden lg:block whitespace-nowrap">Check Sertifikat Prakerja</span>
+                <span class="block lg:hidden whitespace-nowrap">Check Sertifikat</span>
               </a>
             </div>
           </div>
@@ -135,20 +135,20 @@
     </section>
   </div>
   <div class="training">
-    <div class="container px-3 md:px-16">
+    <div class="container px-3 lg:px-16">
       <div class="pelatihan my-3">
         <div class="flex flex-row justify-between items-center mt-2 mb-4">
           <h1 class="text-2xl font-semibold">Pelatihan Terbaru</h1>
           <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
-        <div class="flex flex-row w-auto md:w-full py-3 overflow-x-auto md:overflow-x-hidden">
+        <div class="flex flex-row w-auto lg:w-full py-3 overflow-x-auto lg:overflow-x-hidden">
           <div
             v-for="(pt, idx) in listPelatihanTerbaru"
             :key="idx"
-            class="flex flex-col w-60 md:w-1/4 px-1 mx-1"
+            class="flex flex-col w-60 lg:w-1/4 px-1 mx-1"
           >
             <a :href="pt.url"
-              class="w-full"
+              class="w-60 lg:w-full"
             >
               <div
                 class="card-image rounded-t-lg"
@@ -157,7 +157,7 @@
                 }"
               ></div>
               <div class="p-2">
-                <h3 class="text-xl font-semibold">
+                <h3 class="text-lg lg:text-xl lg:font-semibold">
                   {{
                     pt.title.length > 44
                       ? pt.title.slice(0, 44) + "..."
@@ -182,13 +182,15 @@
           <h1 class="text-2xl font-semibold">Bisnis & Keuangan</h1>
           <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
-        <div class="flex flex-row w-full py-3">
+        <div class="flex flex-row w-auto lg:w-full py-3 overflow-x-auto lg:overflow-x-hidden">
           <div
             v-for="(pt, idx) in listPelatihanTerbaru"
             :key="idx"
-            class="flex flex-col w-1/4 px-1 mx-1"
+            class="flex flex-col w-60 lg:w-1/4 px-1 mx-1"
           >
-            <a :href="pt.url">
+            <a :href="pt.url"
+              class="w-60 lg:w-full"
+            >
               <div
                 class="card-image rounded-t-lg"
                 :style="{
@@ -196,7 +198,7 @@
                 }"
               ></div>
               <div class="p-2">
-                <h3 class="text-xl font-semibold">
+                <h3 class="text-lg lg:text-xl lg:font-semibold">
                   {{
                     pt.title.length > 44
                       ? pt.title.slice(0, 44) + "..."
@@ -221,13 +223,15 @@
           <h1 class="text-2xl font-semibold">Pemasaran</h1>
           <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
-        <div class="flex flex-row w-full py-3">
+        <div class="flex flex-row w-auto lg:w-full py-3 overflow-x-auto lg:overflow-x-hidden">
           <div
             v-for="(pt, idx) in listPelatihanTerbaru"
             :key="idx"
-            class="flex flex-col w-1/4 px-1 mx-1"
+            class="flex flex-col w-60 lg:w-1/4 px-1 mx-1"
           >
-            <a :href="pt.url">
+            <a :href="pt.url"
+              class="w-60 lg:w-full"
+            >
               <div
                 class="card-image rounded-t-lg"
                 :style="{
@@ -235,7 +239,7 @@
                 }"
               ></div>
               <div class="p-2">
-                <h3 class="text-xl font-semibold">
+                <h3 class="text-lg lg:text-xl lg:font-semibold">
                   {{
                     pt.title.length > 44
                       ? pt.title.slice(0, 44) + "..."
@@ -258,7 +262,7 @@
     </div>
   </div>
   <div class="job">
-    <div class="container px-3 md:px-16">
+    <div class="container px-3 lg:px-16">
       <div class="py-5">
         <div class="flex flex-row justify-between items-center mt-2 mb-4">
           <h1 class="text-2xl font-semibold">Lowongan Kerja</h1>
@@ -268,11 +272,11 @@
           <div
             v-for="(lk, idx) in listLowonganKerja"
             :key="idx"
-            class="col-span-4 md:col-span-2 my-2"
+            class="col-span-4 lg:col-span-2 my-2"
           >
             <a :href="lk.url">
               <div class="flex flex-row items-center">
-                <img :src="lk.image" alt="" class="w-28 md:w-32" />
+                <img :src="lk.image" alt="" class="w-28 lg:w-32" />
                 <div class="flex flex-col ml-5 px-3">
                   <h3 class="uppercase font-semibold">{{ lk.title }}</h3>
                   <h4 class="text-gray-600">{{ lk.company }}</h4>
@@ -287,15 +291,15 @@
     </div>
   </div>
   <div class="mitra-rsk">
-    <div class="container px-3 md:px-16">
+    <div class="container px-3 lg:px-16">
       <div
-        class="flex flex-col justify-center items-start md:items-center my-3"
+        class="flex flex-col justify-center items-start lg:items-center my-3"
       >
         <h3 class="text-xl font-semibold mb-3">Mitra RSK</h3>
         <p class="text-lg">
           Rumah Siap Kerja dipercaya oleh institusi terbaik di Indonesia.
         </p>
-        <div class="grid grid-cols-3 md:grid-cols-4 gap-6 w-full mt-3">
+        <div class="grid grid-cols-3 lg:grid-cols-4 gap-6 w-full mt-3">
           <div
             v-for="(mk, idx) in listMitraRsk"
             :key="idx"
@@ -529,12 +533,12 @@ export default defineComponent({
 }
 .scrollbar-black::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  @apply bg-transparent md:bg-gray-600;
+  @apply bg-transparent lg:bg-gray-600;
 }
 .scrollbar-black::-webkit-scrollbar-track {
   border-radius: 10px;
 
-  @apply shadow-none md:shadow-2xl;
+  @apply shadow-none lg:shadow-2xl;
 }
 .card-image {
   background-size: cover;
