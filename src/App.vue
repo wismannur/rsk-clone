@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="home-body">
-    <section class="category-icon">
+    <section class="category-icon pt-3">
       <div class="container px-3 lg:px-16">
         <div class="list-category scrollbar-black">
           <div v-for="(c, idx) in listCategory" :key="idx" class="inline-block">
@@ -25,68 +25,27 @@
       <div class="container px-3 lg:px-16">
         <section class="carousel h-40" aria-label="Gallery">
           <ol class="carousel__viewport scroll-bar-transparent">
-            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide cursor-pointer">
+              <img src="/image/top-class-sandi-uno.jpeg" alt="" class="rounded-lg m-auto">
               <div class="carousel__snapper">
-                <a href="#carousel__slide4" class="carousel__prev"
-                  >Go to last slide</a
-                >
-                <a href="#carousel__slide2" class="carousel__next"
-                  >Go to next slide</a
-                >
               </div>
             </li>
-            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper"></div>
-              <a href="#carousel__slide1" class="carousel__prev"
-                >Go to previous slide</a
-              >
-              <a href="#carousel__slide3" class="carousel__next"
-                >Go to next slide</a
-              >
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide cursor-pointer">
+              <img src="/image/praktek-langsung-menanam-hidroponik.jpeg" alt="" class="rounded-lg m-auto">
+              <div class="carousel__snapper">
+              </div>
             </li>
-            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper"></div>
-              <a href="#carousel__slide2" class="carousel__prev"
-                >Go to previous slide</a
-              >
-              <a href="#carousel__slide4" class="carousel__next"
-                >Go to next slide</a
-              >
+            <li id="carousel__slide3" tabindex="0" class="carousel__slide cursor-pointer">
+              <img src="/image/top-class-sandi-uno.jpeg" alt="" class="rounded-lg m-auto">
+              <div class="carousel__snapper">
+              </div>
             </li>
-            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper"></div>
-              <a href="#carousel__slide3" class="carousel__prev"
-                >Go to previous slide</a
-              >
-              <a href="#carousel__slide1" class="carousel__next"
-                >Go to first slide</a
-              >
+            <li id="carousel__slide4" tabindex="0" class="carousel__slide cursor-pointer">
+              <img src="/image/praktek-langsung-menanam-hidroponik.jpeg" alt="" class="rounded-lg m-auto">
+              <div class="carousel__snapper">
+              </div>
             </li>
           </ol>
-          <aside class="carousel__navigation">
-            <ol class="carousel__navigation-list">
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide1" class="carousel__navigation-button"
-                  >Go to slide 1</a
-                >
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide2" class="carousel__navigation-button"
-                  >Go to slide 2</a
-                >
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide3" class="carousel__navigation-button"
-                  >Go to slide 3</a
-                >
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide4" class="carousel__navigation-button"
-                  >Go to slide 4</a
-                >
-              </li>
-            </ol>
-          </aside>
         </section>
       </div>
     </section>
@@ -525,7 +484,7 @@ export default defineComponent({
   -webkit-box-pack: center;
   box-sizing: border-box;
 
-  @apply inline-block flex-row flex-wrap w-full whitespace-nowrap overflow-x-auto justify-center pt-2 pb-1 my-2;
+  @apply inline-block flex-row flex-wrap w-full whitespace-nowrap overflow-x-auto justify-center pt-2;
 }
 .scrollbar-black::-webkit-scrollbar {
   width: 5px;
@@ -634,7 +593,7 @@ ol, li {
   left: 0;
   display: flex;
   overflow-x: scroll;
-  counter-reset: item;
+  /* counter-reset: item; */
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
@@ -643,17 +602,13 @@ ol, li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
-  counter-increment: item;
+  /* background-color: #f99; */
+  /* counter-increment: item; */
   @apply my-3;
 }
 
-.carousel__slide:nth-child(even) {
-  background-color: #99f;
-}
-
 .carousel__slide:before {
-  content: counter(item);
+  /* content: counter(item); */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -712,7 +667,7 @@ ol, li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  /* background-color: #333; */
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -745,7 +700,7 @@ ol, li {
   right: -1rem;
 }
 
-.carousel::before,
+/* .carousel::before,
 .carousel::after {
   content: '';
   z-index: 1;
@@ -758,14 +713,16 @@ ol, li {
   line-height: 4rem;
   text-align: center;
   pointer-events: none;
-}
+} */
 
-.carousel::before {
+/* .carousel::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+  margin-left: 35px;
 }
 
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-}
+  margin-right: 35px;
+} */
 
 </style>
