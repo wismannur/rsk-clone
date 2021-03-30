@@ -2,7 +2,7 @@
   <Header />
   <div class="home-body">
     <section class="category-icon">
-      <div class="container px-16">
+      <div class="container px-3 md:px-16">
         <div class="list-category scrollbar-black">
           <div
             v-for="(c, idx) in listCategory"
@@ -20,10 +20,10 @@
       </div>
     </section>
     <section class="banner">
-      <div class="container px-16"></div>
+      <div class="container px-3 md:px-16"></div>
     </section>
     <section id="prakerja-button">
-      <div class="container px-16">
+      <div class="container px-3 md:px-16">
         <div class="flex flex-row justify-between px-5 py-4 my-3 rounded bg-primary-blue">
           <img src="/image/prakerja-white.png" alt="" class="w-28">
           <div class="flex flex-row items-center justify-center">
@@ -45,11 +45,11 @@
     </section>
   </div>
   <div class="training">
-    <div class="container px-16">
+    <div class="container px-3 md:px-16">
       <div class="pelatihan my-3">
         <div class="flex flex-row justify-between items-center mt-2 mb-4">
           <h1 class="text-2xl font-semibold">Pelatihan Terbaru</h1>
-          <p class="text-primary-blue text-base">Lihat Semua</p>
+          <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
         <div class="flex flex-row w-full py-3">
           <div 
@@ -83,7 +83,7 @@
       <div class="pelatihan my-3">
         <div class="flex flex-row justify-between items-center mt-2 mb-4">
           <h1 class="text-2xl font-semibold">Bisnis & Keuangan</h1>
-          <p class="text-primary-blue text-base">Lihat Semua</p>
+          <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
         <div class="flex flex-row w-full py-3">
           <div 
@@ -117,7 +117,7 @@
       <div class="pelatihan my-3">
         <div class="flex flex-row justify-between items-center mt-2 mb-4">
           <h1 class="text-2xl font-semibold">Pemasaran</h1>
-          <p class="text-primary-blue text-base">Lihat Semua</p>
+          <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
         </div>
         <div class="flex flex-row w-full py-3">
           <div 
@@ -149,6 +149,38 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="job">
+    <div class="container px-3 md:px-16">
+      <div class="py-5">
+        <div class="flex flex-row justify-between items-center mt-2 mb-4">
+          <h1 class="text-2xl font-semibold">Lowongan Kerja</h1>
+          <p class="text-primary-blue text-base cursor-pointer">Lihat Semua</p>
+        </div>
+        <div class="grid grid-cols-4 gap-5">
+          <div 
+            v-for="(lk, idx) in listLowonganKerja"
+            :key="idx"
+            class="col-span-4 md:col-span-2 my-2"
+          >
+            <a :href="lk.url">
+              <div class="flex flex-row items-center">
+                <img :src="lk.image" alt="" class="w-28 md:w-32">
+                <div class="flex flex-col ml-5 px-3">
+                  <h3 class="uppercase font-semibold">{{ lk.title }}</h3>
+                  <h4 class="text-gray-600">{{ lk.company }}</h4>
+                  <h4>{{ lk.location }}</h4>
+                  <p class="text-gray-600">{{ lk.update }}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mitra-rsk">
+
   </div>
   <Footer />
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" /> -->
@@ -235,6 +267,40 @@ export default defineComponent({
           typeKelas: "Kelas Video",
           rating: "5.0",
         },
+      ],
+      listLowonganKerja: [
+        {
+          image: "/image/jsb.png",
+          title: "Akunting",
+          company: "PT. Jaya Sakti Beton",
+          location: "Kabupaten Bogor",
+          update: "Diposting 2 minggu yang lalu",
+          url: "https://www.rumahsiapkerja.com/lowongan-kerja/e1ef4aad-1889-4c2c-a1b6-82ad29c41504",
+        },
+        {
+          image: "/image/jsb.png",
+          title: "Desain Grafis",
+          company: "PT. Jaya Sakti Beton",
+          location: "Kabupaten Bogor",
+          update: "Diposting 2 minggu yang lalu",
+          url: "https://www.rumahsiapkerja.com/lowongan-kerja/8b845447-06df-4e04-a690-fc7ca3bb55a8",
+        },
+        {
+          image: "/image/jsb.png",
+          title: "Editor Video",
+          company: "PT. Jaya Sakti Beton",
+          location: "Kabupaten Bogor",
+          update: "Diposting 2 minggu yang lalu",
+          url: "https://www.rumahsiapkerja.com/lowongan-kerja/3a58676a-491b-400c-b0c5-f8ba3011cfc8",
+        },
+        {
+          image: "/image/milagros.png",
+          title: "Tele Marketing",
+          company: "PT. Jaya Sakti Beton",
+          location: "Jakarta Timur",
+          update: "Diposting 2 minggu yang lalu",
+          url: "https://www.rumahsiapkerja.com/lowongan-kerja/d0301288-2372-4a9b-9086-b24d307f61d3",
+        },
       ]
     }
   }
@@ -252,6 +318,13 @@ export default defineComponent({
   background: #fafafa;
   @apply py-5;
 }
+.job {
+  background: #f0f0f0;
+}
+.mitra-rsk {
+  background: #fafafa;
+  @apply py-5;
+}
 .list-category {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -265,13 +338,13 @@ export default defineComponent({
   height: 5px;
 }
 .scrollbar-black::-webkit-scrollbar-thumb {
-  background: grey;
   border-radius: 10px;
+  @apply bg-transparent md:bg-gray-600;
 }
 .scrollbar-black::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px grey;
-  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
+
+  @apply shadow-none md:shadow-2xl;
 }
 .card-image {
   background-size: cover;

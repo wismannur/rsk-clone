@@ -1,6 +1,6 @@
 <template>
   <div id="header" class="w-full bg-primary-yellow">
-    <div class="container px-16">
+    <div class="container px-3 md:px-16">
       <div class="flex items-center justify-between min-h-16 py-2">
         <div class="left-top-header flex items-center justify-center">
           <a href="/" class="logo">
