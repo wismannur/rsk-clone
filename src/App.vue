@@ -23,7 +23,7 @@
     </section>
     <section class="banner">
       <div class="container px-3 lg:px-16">
-        <section class="carousel h-40" aria-label="Gallery">
+        <section class="carousel h-80" aria-label="Gallery">
           <ol class="carousel__viewport scroll-bar-transparent">
             <li id="carousel__slide1" tabindex="0" class="carousel__slide cursor-pointer">
               <img src="/image/top-class-sandi-uno.jpeg" alt="" class="rounded-lg m-auto">
@@ -64,7 +64,7 @@
                 class="flex text-sm lg:text-lg w-full"
               >
                 <img
-                  src="/icon/tukar-voucher-prakerja.svg"
+                  :src="'/icon/tukar-voucher-prakerja.svg'"
                   alt=""
                   class="w-5 mx-2 lg:mr-2"
                 />
@@ -80,7 +80,7 @@
                 class="flex text-sm lg:text-lg w-full"
               >
                 <img
-                  src="/icon/check-sertifikat-pelatihan.svg"
+                  :src="'/icon/check-sertifikat-pelatihan.svg'"
                   alt=""
                   class="w-5 mx-2 lg:mr-2"
                 />
@@ -126,7 +126,7 @@
                 <div class="flex flex-row justify-between my-1">
                   <p class="text-md">{{ pt.harga }}</p>
                   <p class="flex text-md text-gray-600">
-                    <img src="/icon/star.svg" alt="" class="w-3 mr-2" />
+                    <img :src="'/icon/star.svg'" alt="" class="w-3 mr-2" />
                     {{ pt.rating }}
                   </p>
                 </div>
@@ -167,7 +167,7 @@
                 <div class="flex flex-row justify-between my-1">
                   <p class="text-md">{{ pt.harga }}</p>
                   <p class="flex text-md text-gray-600">
-                    <img src="/icon/star.svg" alt="" class="w-3 mr-2" />
+                    <img :src="'/icon/star.svg'" alt="" class="w-3 mr-2" />
                     {{ pt.rating }}
                   </p>
                 </div>
@@ -208,7 +208,7 @@
                 <div class="flex flex-row justify-between my-1">
                   <p class="text-md">{{ pt.harga }}</p>
                   <p class="flex text-md text-gray-600">
-                    <img src="/icon/star.svg" alt="" class="w-3 mr-2" />
+                    <img :src="'/icon/star.svg'" alt="" class="w-3 mr-2" />
                     {{ pt.rating }}
                   </p>
                 </div>
@@ -503,7 +503,7 @@ export default defineComponent({
   background-position: 50%;
   position: relative;
   width: 100%;
-  height: 174px;
+  height: 250px;
   overflow: hidden;
 }
 

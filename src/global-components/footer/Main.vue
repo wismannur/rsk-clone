@@ -1,12 +1,12 @@
 <template>
   <footer class="bg-primary-blue">
     <div class="container px-3 md:px-16">
-      <div class="flex flex-col flex-wrap lg:flex-row justify-between border-none lg:border-b border-white">
+      <div class="flex flex-col flex-wrap lg:flex-row justify-between lg:border-b border-white">
         <div class="flex flex-row order-min-2 lg:order-none justify-center items-center pt-5 pb-2 lg:py-5 mr-3 lg:ml-8 lg:mr-2">
           <div
             class="logo-footer-rsk flex flex-col justify-center items-center"
           >
-            <img src="/icon/logo.svg" alt="logo rsk" class="w-24 lg:w-44" />
+            <img :src="'/icon/logo.svg'" alt="logo rsk" class="w-24 lg:w-44" />
             <h3 class="text-white font-semibold hidden lg:block">Rumah Siap Kerja</h3>
           </div>
         </div>
