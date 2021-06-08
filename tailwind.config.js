@@ -1,6 +1,9 @@
-module.exports = {
+require('dotenv').config();
+const envMode = process.env.envMode === 'prod';
+
+const tailwindConfig = {
   purge: {
-    enabled: true,
+    enabled: envMode,
     content: [
       "./src/**/*.php",
       "./src/**/*.html",
@@ -270,3 +273,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+module.exports = tailwindConfig;
