@@ -1,19 +1,17 @@
 require('dotenv').config();
 const envMode = process.env.envMode === 'prod';
 
-const tailwindConfig = {
+module.exports = {
   purge: {
     enabled: envMode,
     content: [
       "./src/**/*.php",
       "./src/**/*.html",
       "./src/**/*.js",
-      "./src/**/*.ts",
       "./src/**/*.vue",
       "./resources/**/*.php",
       "./resources/**/*.html",
       "./resources/**/*.js",
-      "./resources/**/*.ts",
       "./resources/**/*.vue",
     ],
   },
@@ -273,5 +271,3 @@ const tailwindConfig = {
   },
   plugins: [],
 };
-
-module.exports = tailwindConfig;
