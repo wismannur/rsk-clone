@@ -1,7 +1,18 @@
 import { UserConfigExport } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import jsx from '@vitejs/plugin-vue-jsx';
 import viteCompression from 'vite-plugin-compression';
+
+require('dotenv').config();
+const envMode = process.env.envMode === 'prod';
+console.log('envMode vite ', envMode);
+
+const vcProd = {
+  ext: '.br',
+  algorithm: 'brotliCompress',
+  // deleteOriginFile: true,
+  verbose: true,
+};
+const vc = envMode ? vcProd : {};
 
 export default (): UserConfigExport => {
   return {
@@ -10,16 +21,10 @@ export default (): UserConfigExport => {
     },
     plugins: [
       vue(),
-      jsx(),
       // gizp
       // viteCompression(),
       // br
-      viteCompression({
-        ext: '.br',
-        algorithm: 'brotliCompress',
-        deleteOriginFile: true,
-        verbose: true,
-      }),
+      viteCompression(vc),
     ],
   };
 };
