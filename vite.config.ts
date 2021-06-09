@@ -17,6 +17,8 @@ export default (): UserConfigExport => {
       viteCompression({
         ext: '.br',
         algorithm: 'brotliCompress',
+        deleteOriginFile: true,
+        verbose: true,
       }),
     ],
   };
